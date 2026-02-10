@@ -1,6 +1,9 @@
 apiVersion: v2
-description: A Helm chart to serve as the Validated Patterns Template
-keywords:
-  - pattern
-name: vp-template
-version: 0.0.1
+name: zero-trust-workload-identity-manager
+description: Zero Trust Workload Identity Manager Helm Chart
+type: application
+version: 0.1.0
+home: https://github.com/validatedpatterns/ztwim-chart
+maintainers:
+  - name: Validated Patterns Team
+    email: validatedpatterns@googlegroups.com

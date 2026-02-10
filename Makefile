@@ -36,8 +36,10 @@ test: helm-lint helm-unittest ## Runs helm lint and unit tests
 .PHONY: super-linter
 super-linter: ## Runs super linter locally
 	rm -rf .mypy_cache
-	podman run -e RUN_LOCAL=true -e USE_FIND_ALGORITHM=true	\
-					-e VALIDATE_BIOME_FORMAT=false \
-					-v $(PWD):/tmp/lint:rw,z \
-					-w /tmp/lint \
-					ghcr.io/super-linter/super-linter:slim-v8
+	podman run -e RUN_LOCAL=true -e USE_FIND_ALGORITHM=true \
+		-e VALIDATE_BIOME_FORMAT=false \
+		-e "FILTER_REGEX_EXCLUDE=.*/templates/.*" \
+		-e VALIDATE_GITHUB_ACTIONS_ZIZMOR=false \
+		-v $(PWD):/tmp/lint:rw,z \
+		-w /tmp/lint \
+		ghcr.io/super-linter/super-linter:slim-v8

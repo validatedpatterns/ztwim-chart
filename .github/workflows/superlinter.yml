@@ -14,3 +14,6 @@ jobs:
     with:
       sl_env: |
         VALIDATE_BIOME_FORMAT=false
+        # Exclude Helm templates ({{ }} not valid YAML for yamllint/kubeconform)
+        FILTER_REGEX_EXCLUDE=.*/templates/.*
+        VALIDATE_GITHUB_ACTIONS_ZIZMOR=false

@@ -1,9 +1,13 @@
 {{ template "chart.header" . }}
 {{ template "chart.deprecationWarning" . }}
 
+<!-- markdownlint-disable MD013 -->
 {{ template "chart.badgesSection" . }}
+<!-- markdownlint-enable MD013 -->
 
+<!-- markdownlint-disable MD013 -->
 {{ template "chart.description" . }}
+<!-- markdownlint-enable MD013 -->
 
 This chart is used to serve as the template for Validated Patterns Charts
 
@@ -17,6 +21,8 @@ This chart is used to serve as the template for Validated Patterns Charts
 
 {{ template "chart.requirementsSection" . }}
 
+<!-- markdownlint-disable MD013 MD034 MD060 -->
 {{ template "chart.valuesSection" . }}
+<!-- markdownlint-enable MD013 MD034 MD060 -->
 
 {{ template "helm-docs.versionFooter" . }}
